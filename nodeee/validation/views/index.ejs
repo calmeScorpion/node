@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+  </head>
+  <body>
+    <% images.forEach(function(image) { %> <% console.log(image) %>
+
+    <img
+      width="200px"
+      class="image"
+      src="data:image;base64,
+            <%=image.toString('base64')%>"
+    />
+    <p><%=image.name %></p>
+    <% }); %>
+  </body>
+</html>
